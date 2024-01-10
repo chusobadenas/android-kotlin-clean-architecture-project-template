@@ -18,8 +18,8 @@ class Navigator {
    */
   fun navigateToMain(context: Context) {
     if (context != null) {
-      val intentToLaunch: Intent = MainActivity.getCallingIntent(context)
-      context.startActivity(intentToLaunch)
+        val intentToLaunch: Intent = MainActivity.getCallingIntent(context)
+        context.startActivity(intentToLaunch)
     }
   }
 }

@@ -1,6 +1,6 @@
 package ${packageName}.domain.repository
 
-import ${packageName}.data.entity.User
+import ${packageName}.data.model.User
 
 
 /**

@@ -1,4 +1,4 @@
-package ${packageName}.data.entity
+package ${packageName}.data.model
 
 /**
  * Represents a user.

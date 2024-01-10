@@ -1,6 +1,6 @@
 package ${packageName}.data.repository
 
-import ${packageName}.data.entity.User
+import ${packageName}.data.model.User
 import ${packageName}.data.repository.remote.APIService
 import ${packageName}.domain.repository.UserRepository
 
@@ -12,7 +12,6 @@ class UserDataRepository(
 ): UserRepository {
 
   override fun saySomething(user: User, str: String): String {
-    val result = user.name() + " " + user.surname() + " says: " + str
-    return result
+    return "${user.name} ${user.surname} says: $str"
   }
 }

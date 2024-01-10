@@ -9,11 +9,14 @@ import ${packageName}.domain.repository.UserRepository
  */
 class SayHello(
     private val userRepository: UserRepository
-): UseCase {
+): UseCase<SayHello.Params, String> {
 
-  override fun buildUseCaseObservable(param: Array<Any>): String {
-    val user: User = (User) param[0]
-    val str: String = (String) param[1]
-    return userRepository.saySomething(user, str)
+  override suspend fun run(params: Params): String {
+      return userRepository.saySomething(params.user, params.str)
   }
+
+  data class Params(
+      val user: User,
+      val str: String
+  )
 }
