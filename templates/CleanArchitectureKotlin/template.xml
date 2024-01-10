@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="Android Clean Architecture Kotlin app"
+    minApi="23"
+    minBuildApi="23"
+    description="Creates a new Android application based on Clean Architecture using Kotlin">
+
+    <category value="Activity"/>
+
+    <parameter
+        id="activityName"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToActivity(activityLayoutName)}"
+        default="MainActivity"
+        help="The name of the activity to create"/>
+
+    <parameter
+        id="activityLayoutName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.chusobadenas.myapp"/>
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_new_project.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl"/>
+    <execute file="recipe.xml.ftl"/>
+
+</template>
