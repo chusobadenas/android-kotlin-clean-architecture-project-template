@@ -8,6 +8,7 @@
     description="Creates a new Android application based on Clean Architecture using Kotlin">
 
     <category value="Activity"/>
+    <formfactor value="Mobile"/>
 
     <parameter
         id="activityName"
